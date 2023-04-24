@@ -10,27 +10,19 @@ func main() {
 }
 
 func countMatches(items [][]string, ruleKey string, ruleValue string) int {
-	var isType, isColor, isName bool
 	var count int
-	if ruleKey == "type" {
-		isType = true
-	} else if ruleKey == "color" {
-		isColor = true
-	} else {
-		isName = true
-	}
+
 	for _, j := range items {
-		if isType && j[0] == ruleValue {
+		if ruleKey == "type" && j[0] == ruleValue {
 			count++
 		}
-		if isColor && j[1] == ruleValue {
+		if ruleKey == "color" && j[1] == ruleValue {
 			count++
 		}
-		if isName && j[2] == ruleValue {
+		if ruleKey == "name" && j[2] == ruleValue {
 			count++
 		}
 	}
 
 	return count
 }
-
