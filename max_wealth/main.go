@@ -25,5 +25,5 @@ func count(nums []int) int {
 		sum += j
 	}
 
-	return sum;
+	return sum
 }
